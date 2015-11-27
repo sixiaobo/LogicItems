@@ -131,8 +131,6 @@
 - (void)setMode:(VisionMode)mode {
     _mode = mode;
     [self fireNotific];
-    
-    NSLog(@"fuck you");
 }
 
 @end
