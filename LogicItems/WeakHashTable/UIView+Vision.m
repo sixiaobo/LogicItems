@@ -132,7 +132,7 @@
     _mode = mode;
     [self fireNotific];
     
-    NSLog(@"fuck");
+    NSLog(@"fuck you");
 }
 
 @end
