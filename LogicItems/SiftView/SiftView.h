@@ -1,14 +1,20 @@
-//
-//  SiftView.h
-//  AppForMeiDa
-//
-//  Created by sixiaobo on 15/4/24.
-//  Copyright (c) 2015年 mxyc. All rights reserved.
-//
 
+
+/**
+ *  @author sixiaobo, 15-11-26 16:11:19
+ *
+ *  侧滑视图，可切换视图控制器
+ *
+ *  @param open
+ *
+ *  @return
+ *
+ *  @since v6.3.5
+ */
 #import <UIKit/UIKit.h>
+#import "Header.h"
 
-typedef void (^ScrollBlock)(BOOL);
+typedef void (^ScrollBlock)(BOOL open);
 
 @interface SiftView : UIView
 

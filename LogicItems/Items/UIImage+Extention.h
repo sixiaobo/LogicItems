@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (handle)
+@interface UIImage (Extention)
 
 //高斯模糊
 - (UIImage *)boxblurImageWithBlur:(CGFloat)blur;
+
+/**
+ *  改变图标颜色
+ *
+ *  @param color
+ *
+ *  @return
+ */
+- (UIImage *)imageWithColor:(UIColor *)color;
 
 
 @end

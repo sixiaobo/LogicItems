@@ -7,8 +7,7 @@
 //
 
 #import "SiftView.h"
-#import "BaseViewController.h"
-
+#import "Factory.h"
 
 #define kLeftWidth (kScreenWidth * 0.618)
 
@@ -99,7 +98,7 @@
 
 - (void)changeBlurImage {
     [self handleVcStage:NO];
-    _blur.image = [UIParts screenShotWithController:_vc];
+    _blur.image = [Factory screenShotWithController:_vc];
 }
 
 
@@ -161,23 +160,13 @@
 
 //变换视图控制器
 - (void)changeVcWithClassName:(NSString *)className {
-    BaseViewController *cvc = [_controllersDic objectForKey:className];
+    UIViewController *cvc = [_controllersDic objectForKey:className];
     if (!cvc) {
         cvc = [[NSClassFromString(className) alloc] init];
         [_controllersDic setObject:cvc forKey:className];
-        __block SiftView *wself = self;
-        cvc.backLeft = ^(){
-            [wself show];
-        };
-        _scrollBlock = cvc.scrollBlock;
     }
     [_vc.view insertSubview:cvc.view belowSubview:_blur];
     [_vc addChildViewController:cvc];
-    if (_markVc != cvc) {
-        [_markVc.view removeFromSuperview];
-        [_markVc removeFromParentViewController];
-        _markVc = cvc;
-    }
     [self hidden];
 }
 
