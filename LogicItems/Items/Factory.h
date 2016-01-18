@@ -25,5 +25,6 @@
  */
 + (UIImage *)screenShotWithController:(UIViewController *)controller;
 
++ (CGSize)getSizeWithString:(NSString *)str andFont:(UIFont *)font andMaxSize:(CGSize)maxSize;
 
 @end

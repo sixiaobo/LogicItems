@@ -29,4 +29,7 @@
 #define RectH(rect)     rect.size.height
 
 
+#import "UIImage+Extention.h"
+
+
 #endif /* Header_h */

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672E7DC01C0C4D4800B3E73A /* HotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 672E7DBE1C0C4D4800B3E73A /* HotView.m */; settings = {ASSET_TAGS = (); }; };
+		672E7DC41C0C6D1300B3E73A /* NSString+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 672E7DC31C0C6D1300B3E73A /* NSString+Extention.m */; settings = {ASSET_TAGS = (); }; };
 		678574D21C05BF42002B9E00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 678574D11C05BF42002B9E00 /* main.m */; };
 		678574D51C05BF42002B9E00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 678574D41C05BF42002B9E00 /* AppDelegate.m */; };
 		678574D81C05BF42002B9E00 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 678574D71C05BF42002B9E00 /* ViewController.m */; };
@@ -27,6 +29,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		672E7DBE1C0C4D4800B3E73A /* HotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotView.m; sourceTree = "<group>"; };
+		672E7DBF1C0C4D4800B3E73A /* HotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotView.h; sourceTree = "<group>"; };
+		672E7DC11C0C4DFE00B3E73A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		672E7DC21C0C6D1300B3E73A /* NSString+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extention.h"; sourceTree = "<group>"; };
+		672E7DC31C0C6D1300B3E73A /* NSString+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extention.m"; sourceTree = "<group>"; };
 		678574CD1C05BF42002B9E00 /* LogicItems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogicItems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		678574D11C05BF42002B9E00 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		678574D31C05BF42002B9E00 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		672E7DBD1C0C4D3800B3E73A /* HotWordsView */ = {
+			isa = PBXGroup;
+			children = (
+				672E7DBF1C0C4D4800B3E73A /* HotView.h */,
+				672E7DBE1C0C4D4800B3E73A /* HotView.m */,
+			);
+			path = HotWordsView;
+			sourceTree = "<group>";
+		};
 		678574C41C05BF42002B9E00 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		678574CF1C05BF42002B9E00 /* LogicItems */ = {
 			isa = PBXGroup;
 			children = (
+				672E7DBD1C0C4D3800B3E73A /* HotWordsView */,
 				678575401C070A6B002B9E00 /* PLG */,
 				678575321C06F868002B9E00 /* WeakHashTable */,
 				678575251C06EB10002B9E00 /* SiftView */,
@@ -117,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				678574D11C05BF42002B9E00 /* main.m */,
+				672E7DC11C0C4DFE00B3E73A /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,6 +147,8 @@
 				678574F41C05C0DB002B9E00 /* Factory.m */,
 				678574F61C05C29E002B9E00 /* UIImage+Extention.h */,
 				678574F71C05C29E002B9E00 /* UIImage+Extention.m */,
+				672E7DC21C0C6D1300B3E73A /* NSString+Extention.h */,
+				672E7DC31C0C6D1300B3E73A /* NSString+Extention.m */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -234,9 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672E7DC01C0C4D4800B3E73A /* HotView.m in Sources */,
 				678574F51C05C0DB002B9E00 /* Factory.m in Sources */,
 				678574F81C05C29E002B9E00 /* UIImage+Extention.m in Sources */,
 				678574D81C05BF42002B9E00 /* ViewController.m in Sources */,
+				672E7DC41C0C6D1300B3E73A /* NSString+Extention.m in Sources */,
 				678574D51C05BF42002B9E00 /* AppDelegate.m in Sources */,
 				678575281C06EB10002B9E00 /* SiftView.m in Sources */,
 				6785752F1C06F1EA002B9E00 /* Vc.m in Sources */,
@@ -353,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/sixiaobo/Desktop/LogicItems/LogicItems/PrefixHeader.pch;
 				INFOPLIST_FILE = LogicItems/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LogicItems.LogicItems;
@@ -364,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/sixiaobo/Desktop/LogicItems/LogicItems/PrefixHeader.pch;
 				INFOPLIST_FILE = LogicItems/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LogicItems.LogicItems;

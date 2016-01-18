@@ -9,13 +9,14 @@
 #import "ViewController.h"
 #import "SiftView.h"
 #import "UIView+Vision.h"
-
+#import "HotView.h"
 
 @interface ViewController () {
     SiftView *_sift;
     BOOL _open;
     UILabel *_info;
 }
+@property (nonatomic, strong) HotView *hot;
 
 @end
 
@@ -51,6 +52,31 @@
     _info.text = @"白天模式";
     
     [self.view addSubview:_info];
+    
+    
+    
+    __weak UILabel *wlabel = _info;
+    __weak ViewController *wself = self;
+//    HotView *hot = [[HotView alloc] initWithFrame:CGRectMake(0, 68, kScreenWidth, 20) clickBlock:^(NSString *str) {
+//        wlabel.text = str;
+//        [hot loadWithItems:[wself items]];   //这里面的hot已为空，被arc释放了
+//    }];
+//    [self.view addSubview:hot];
+//    [hot loadWithItems:[self items]];
+    
+    _hot = [[HotView alloc] initWithFrame:CGRectMake(0, 68, kScreenWidth, 20) clickBlock:^(NSString *str) {
+        wlabel.text = str;
+        [wself.hot loadWithItems:[wself items]];   //这里面的hot已为空，被arc释放了
+    }];
+    [self.view addSubview:_hot];
+    [_hot loadWithItems:[self items]];
+    
+}
+
+
+- (NSArray *)items {
+    NSString *str = arc4random() % 2 ? @"幸福的眼泪" : @"快乐的人不要去天堂起来";
+    return @[@"你是很牛逼", str, @"走吧", @"去实现更大的报复", @"流行的孩子", @"和一只马的感情越来越好", @"二环内夜晚是最文艺的"];
 }
 
 
