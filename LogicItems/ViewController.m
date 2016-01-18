@@ -57,13 +57,6 @@
     
     __weak UILabel *wlabel = _info;
     __weak ViewController *wself = self;
-//    HotView *hot = [[HotView alloc] initWithFrame:CGRectMake(0, 68, kScreenWidth, 20) clickBlock:^(NSString *str) {
-//        wlabel.text = str;
-//        [hot loadWithItems:[wself items]];   //这里面的hot已为空，被arc释放了
-//    }];
-//    [self.view addSubview:hot];
-//    [hot loadWithItems:[self items]];
-    
     _hot = [[HotView alloc] initWithFrame:CGRectMake(0, 68, kScreenWidth, 20) clickBlock:^(NSString *str) {
         wlabel.text = str;
         [wself.hot loadWithItems:[wself items]];   //这里面的hot已为空，被arc释放了
